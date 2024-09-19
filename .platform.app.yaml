@@ -4,7 +4,6 @@ type: "python:3.11"
 relationships:
     database: "db:postgresql"
 
-# The configuration of the app when it's exposed to the web.
 web:
     upstream:
         socket_family: unix
@@ -18,16 +17,13 @@ web:
             expires: 1h
             allow: true
 
-# The size of the persistent disk of the application (in MB).
 disk: 512
 
-# Set a local read/write mount for logs.
 mounts:
     "logs":
         source: local
         source_path: logs
 
-# The hooks executed at various points in the lifecycle of the application.
 hooks:
     build: |
         pip install --upgrade pip
@@ -47,9 +43,3 @@ variables:
         DB_PASSWORD: 'your_database_password'
         DB_HOST: 'your_database_host'
         DB_PORT: 'your_database_port'
-
-services:
-  db:
-    type: postgresql:13
-    disk: 1024
-    size: AUTO
