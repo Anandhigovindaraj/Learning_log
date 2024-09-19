@@ -47,3 +47,9 @@ variables:
         DB_PASSWORD: 'your_database_password'
         DB_HOST: 'your_database_host'
         DB_PORT: 'your_database_port'
+
+services:
+  db:
+    type: postgresql:13
+    disk: 1024
+    size: AUTO
