@@ -25,3 +25,5 @@ HTML/CSS (Django templating)
 Add Entry Page
 
 Topic Page with Entries
+
+<img src="https://github.com/Anandhigovindaraj/Learning_log/blob/e3789c7e68841ced9f8f4667011d9a45f7743f8d/first%20page.png"
